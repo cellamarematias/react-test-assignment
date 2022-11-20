@@ -1,0 +1,32 @@
+.button {
+    width: 180px;
+    height: 48px;
+    background: #2F7BFF;
+    box-shadow: 0px 8px 24px -4px rgba(47, 123, 255, 0.5);
+    border-radius: 12px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+}
+
+input[type="submit"]:hover{
+    width: 180px;
+    height: 48px;
+    background: #2F7BFF;
+    box-shadow: 0px 8px 24px -4px #2F7BFF;
+    border-radius: 12px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+}
+
+input[type="submit"]:active{
+    width: 180px;
+    height: 48px;
+    background: #2F7BFF;
+    box-shadow: none;
+    border-radius: 12px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+}

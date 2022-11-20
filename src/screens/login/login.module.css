@@ -1,0 +1,10 @@
+.loginBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    margin: 61px auto;
+}

@@ -1,0 +1,38 @@
+[
+	{
+		"email": "email1",
+		"password": "asd",
+		"avatar": "/avatar.jpeg",
+		"name": "Elon"
+	},
+	{
+		"email": "email",
+		"password": "123",
+		"avatar": "/email.jpeg",
+		"name": "Elon"
+	},
+	{
+		"email": "email1",
+		"password": "asd",
+		"avatar": "/avatar.jpeg",
+		"name": "Elon"
+	},
+	{
+		"email": "email1",
+		"password": "asd",
+		"avatar": "/avatar.jpeg",
+		"name": "Elon"
+	},
+	{
+		"email": "email1",
+		"password": "asd",
+		"avatar": "/avatar.jpeg",
+		"name": "Elon"
+	},
+	{
+		"email": "elon@mercdev.com",
+		"password": "twitter",
+		"avatar": "/avatar.jpeg",
+		"name": "Elon"
+	}
+]
