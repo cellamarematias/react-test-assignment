@@ -1,20 +1,18 @@
-import { createContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from "react";
+import { UserContextType } from "./context/types";
+import UserContext, { UserContextProvider } from "./context/user";
 
 // screens
 import Login from "./screens/login/Login";
 import Profile from "./screens/profile/Profile";
 
-export const LoginContext = createContext({ loggedIn: false, setLoggedIn: (loggedIn: false) => { } })
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState<boolean>(false)
-
-  
+  const {userContext, setUserContext} = useContext(UserContext) as UserContextType;
+ 
     return (
-      <LoginContext.Provider value={{ loggedIn, setLoggedIn }}>
-        {loggedIn ? <Profile></Profile> : <Login></Login>}
-      </LoginContext.Provider>
+        userContext.length > 0 ? <Profile></Profile> : <Login></Login>
     )
-}
+};
 
 export default App;

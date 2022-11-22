@@ -24,15 +24,15 @@
 		"name": "Elon"
 	},
 	{
-		"email": "email1",
-		"password": "asd",
-		"avatar": "/avatar.jpeg",
-		"name": "Elon"
+		"email": "matias@matias.com",
+		"password": "asdasdasd",
+		"avatar": "/logo.svg",
+		"name": "Matías"
 	},
 	{
 		"email": "elon@mercdev.com",
 		"password": "twitter",
-		"avatar": "/avatar.jpeg",
+		"avatar": "/public/avatar.jpeg",
 		"name": "Elon"
 	}
 ]

@@ -5,13 +5,22 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import login from '../../api/index';
 import  loader  from "../../../public/loader.svg";
-import { LoginContext } from '../../App';
+import UserContext from '../../context/user';
+import { UserContextType } from '../../context/types';
 // shared components
 import Button from '../shared/button/Button'
 
 interface IFormInput {
   email: string;
   password: string;
+}
+
+interface Res {
+  data: {
+    name: string
+    avatar: string
+    loggedIn: boolean
+  }
 }
 
 const schema = yup.object({
@@ -24,25 +33,24 @@ export default function LoginForm() {
     resolver: yupResolver(schema)
   });
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const { loggedIn, setLoggedIn } = useContext(LoginContext)
+
+  const {userContext, setUserContext} = useContext(UserContext) as UserContextType;
 
   const onSubmit = (data: IFormInput) => {
     setIsLoading(true)
     login(data).then((res) => {
-      setIsLoading(false)
-      console.log(res);
-      setLoggedIn(true)
+      setIsLoading(false)      
+      const newUser= {
+        name: res.data.name,
+        avatar: res.data.avatar,
+        loggedIn: res.data.loggedIn,
+      }
+      setUserContext([newUser])      
     }).catch((err) => {
       console.log(err);
       setIsLoading(false)
     })
   };
-
-  useEffect(() => {
-    console.log(isLoading)
-    console.log('user is', loggedIn)  
-  }, [isLoading, loggedIn])
-
 
   return (
     <div className={styles.formContainer}>
@@ -60,3 +68,4 @@ export default function LoginForm() {
     </div>
   )
 }
+

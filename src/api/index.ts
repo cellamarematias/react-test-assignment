@@ -14,7 +14,7 @@ const login = (data: any) => {
           }
         });
         if(result){
-          resolve({data: { avatar: result.avatar, name: result.name}})
+          resolve({data: { avatar: result.avatar, name: result.name, loggedIn: true}})
         } else {
           reject({ error: "Incorrect email or password" });
         }
