@@ -9,7 +9,7 @@
     color: #FFFFFF;
 }
 
-input[type="submit"]:hover{
+.button:hover{
     width: 180px;
     height: 48px;
     background: #2F7BFF;
@@ -20,10 +20,10 @@ input[type="submit"]:hover{
     color: #FFFFFF;
 }
 
-input[type="submit"]:active{
+.button:active{
     width: 180px;
     height: 48px;
-    background: #2F7BFF;
+    background: #0057FF;
     box-shadow: none;
     border-radius: 12px;
     border: none;

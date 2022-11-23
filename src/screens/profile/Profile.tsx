@@ -21,7 +21,7 @@ export default function Profile() {
       <div className={styles.cardBody}>
       <img src={`${userContext[0].avatar}`} alt="company logo" className={styles.avatar} />
         <p className={styles.cardText}>That’s it, {userContext[0].name}!</p>
-        <form action="" >
+        <form action="" onSubmit={handleSubmit(onSubmit)}>
           <Button>Logout</Button>
         </form>
       </div>

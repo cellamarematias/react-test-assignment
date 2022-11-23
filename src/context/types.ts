@@ -1,5 +1,3 @@
-import { boolean } from "yup";
-
 export type User = {
     name: String;
     avatar: String;

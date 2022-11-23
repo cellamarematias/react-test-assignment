@@ -5,7 +5,7 @@ const login = (data: any) => {
   let results: any;
 
   return new Promise((resolve, reject) => {
-    
+
     setTimeout(() => {
       const user = usersData.find((users: any) => {
         let result = users.find((item: any) => {
@@ -13,8 +13,8 @@ const login = (data: any) => {
             return item
           }
         });
-        if(result){
-          resolve({data: { avatar: result.avatar, name: result.name, loggedIn: true}})
+        if (result) {
+          resolve({ data: { avatar: result.avatar, name: result.name, loggedIn: true } })
         } else {
           reject({ error: "Incorrect email or password" });
         }

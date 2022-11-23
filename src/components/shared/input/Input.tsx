@@ -2,8 +2,6 @@ import React from 'react';
 import styles from './input.module.css';
 import { Path, useForm, UseFormRegister, SubmitHandler } from "react-hook-form";
 
-
-
 type InputProps = {
   label: any;
   register: any;
@@ -18,4 +16,3 @@ export default function ({ label, register, required }: InputProps) {
     </>
   )
 }
-
